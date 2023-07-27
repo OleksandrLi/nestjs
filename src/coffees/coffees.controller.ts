@@ -22,7 +22,6 @@ export class CoffeesController {
 
   @Get('')
   findAll(@Query() paginationQuery: PaginationQueryDto) {
-    // const { limit, offset } = paginationQuery;
     return this.coffeeService.findAll(paginationQuery);
   }
 
@@ -32,7 +31,6 @@ export class CoffeesController {
   }
 
   @Post('')
-  // @HttpCode(HttpStatus.GONE)
   create(@Body() createCoffeeDto: CreateCoffeeDto) {
     return this.coffeeService.create(createCoffeeDto);
   }
